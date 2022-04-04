@@ -10,8 +10,8 @@ body,html {
 
 body {
     display: grid;
-	grid-template-rows: 125px 2fr;
-	grid-template-columns: 350px 2fr;
+	grid-template-rows: 15px 2fr;
+	grid-template-columns: 100px 2fr;
 	grid-template-areas: 
 	"header header"
 	"sidebar content";
@@ -19,7 +19,7 @@ body {
 
 .header {
 	grid-area: header;
-	padding:5px;
+	padding:1px;
     background-color: rgb(203, 198, 250);
 
 }
@@ -27,13 +27,14 @@ body {
 	.sidebar {
 		
 		grid-area: sidebar;
-		padding:1px;
-		background-color: rgb(203, 198, 250);
+		padding:50px;
+		float: left;
+		background-color: rgb(190, 155, 255);
 
 }
 .content {
 	grid-area: content;
 	padding:5px;
-    background-color: rgb(203, 198, 250);
+    background-color: rgb(126, 113, 240);
 }
 
