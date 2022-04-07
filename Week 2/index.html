@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beaches</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+	<div class="header">
+		My Beach Trips
+	</div>
+	<div class="sidebar">
+		Beaches in California
+        <p>This is a summary of all the beaches I have visited in California for the past few years. All of them are located in SOCAL. </p>
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+
+	<script>
+
+alert('Welcome to this map of all the beaches I have visited!')
+
+
+                let data = [
+	{
+		'title':'Redondo',
+		'lat': 33.849182,
+		'lon': -118.388405,
+        'description': 'chill'
+	},
+	{
+		'title':'Santa Monica',
+		'lat': 34.024212,
+		'lon': -118.496475,
+        'description' : 'always crowded'
+	},
+	{
+		'title':'Palos Verdes',
+		'lat': 33.8026,
+		'lon': -118.3970,
+        'description' : 'very beautiful'
+	},
+	{
+		'title':'Pacific Palisades',
+		'lat':34.0391,
+		'lon': -118.5482,
+        'description': 'the flattest'
+	},
+	{
+		'title':'Mission Beach',
+		'lat': 32.7707,
+		'lon': -117.2514,
+        'description': 'a tourist spot'
+	}
+]         
+var map = L.map('map').setView([33.849182,-118.388405], 3);
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+data.forEach(function(item){var marker = L.marker([item.lat,item.lon]).addTo(map).bindPopup( item.title).openPopup();
+</script>
+
+</body>
+
+</html>
+
+
