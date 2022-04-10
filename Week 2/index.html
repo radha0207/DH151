@@ -18,8 +18,24 @@
 		My Beach Trips
 	</div>
 	<div class="sidebar">
-		Beaches in California
+		<b>Beaches in California</b> 
         <p>This is a summary of all the beaches I have visited in California for the past few years. All of them are located in SOCAL. </p>
+        <ul class="text-center"> 
+        <li>Redondo Beach</li>
+        <img src="https://www.visittheusa.com/sites/default/files/styles/hero_l_x2/public/images/hero_media_image/2017-01/1%20HERO_20_Redondo%20Pier%20Daytime_Web72DPI_CROP.jpg?h=39abc8eb&itok=goduP34X" 
+        width=" 150px">
+        <li>Santa Monica Beach</li>
+        <img src="https://www.santamonica.com/wp-content/uploads/2021/08/best-beach-in-los-angeles.jpg" 
+        width=" 150px">
+        <li>Palos Verdes Beach</li>
+        <img src=" https://stephenhaw.com/wp-content/uploads/2019/12/iStock-1190193158.jpg" 
+        width=" 150px">
+       
+        <li>Mission Beach</li>
+        <img src=" https://cdn.liverez.com/5/10733/1/144871/800/1.jpg?v=3/24/2018%203:06:37%20PM " 
+        width=" 150px">
+
+    </ul>
 	</div>
 	<div class="content">
 		<div id="map"></div>
@@ -66,8 +82,10 @@ var map = L.map('map').setView([33.849182,-118.388405], 3);
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
-data.forEach(function(item){var marker = L.marker([item.lat,item.lon]).addTo(map).bindPopup( item.title).openPopup();
-</script>
+data.forEach(function(item) 
+        {var marker = L.marker([item.lat,item.lon]).addTo(map).bindPopup( item.title).openPopup}) ;
+
+    </script>
 
 </body>
 
